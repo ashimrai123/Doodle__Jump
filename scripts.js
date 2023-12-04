@@ -257,12 +257,14 @@ const obstacles = [];
 
 function gameOver() {
     // Display try again message
-    const gameOverMessage = 'Press any key to try again!';
-
+    const gameOverMessageTry = `Press any key to try again!`;
+    const gameOverMessageScore = `Score: ${score}`;
     // Draw game over message on the canvas
     ctx.font = '30px Arial';
     ctx.fillStyle = '#000';
-    ctx.fillText(gameOverMessage, canvas.width / 2 - 150, canvas.height / 2);
+    ctx.fillText(gameOverMessageTry, canvas.width / 2 - 150, canvas.height / 2);
+    ctx.fillText(gameOverMessageScore, canvas.width / 2 - 150, canvas.height / 2 -60);
+
 
     // Add an event listener to restart the game on any key press
     window.addEventListener('keydown', restartGame);
